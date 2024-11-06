@@ -3,11 +3,11 @@ var router = express.Router();
 var connect = require('connect')
 var app = connect
 
-function helloworld(req, res, next) {
+function Aboutme(req, res, next) {
   res.setHeader('Content-Type', 'text/plain');
   res.end("Hello World")
 }
-app.use('/hello', helloword);
+app.use('/Aboutme', aboutme);
 app.listen(3000)
 
 /* GET index page. */
