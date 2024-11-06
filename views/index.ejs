@@ -1,0 +1,270 @@
+<%- include Partials/header.ejs %>
+  <%- include Partials/main_nav.ejs %>
+    <!--Main Content-->
+    <h1>
+      <%= title %>
+    </h1>
+    <p>Welcome to <%= title %>
+    </p>
+
+    <%- include Partials/footer.ejs %>]
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="UTF-8" /> <!-- here is the meta info -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Main Stylesheet (with global styles and Google Fonts) -->
+        <link rel="stylesheet" href="style.css" />
+
+        <!-- Tablet Stylesheet (for screens max-width: 1024px) -->
+        <link rel="stylesheet" href="tablet.css" media="screen and (max-width: 1024px)" />
+
+        <!-- Mobile Stylesheet (for screens max-width: 768px) -->
+        <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 768px)" />
+
+        <!-- This will be the title of my webpage -->
+        <title>My Portfolio (Zainab Syed)</title>
+
+        <!-- Incline CSS for responsive Design and Video Styling -->
+        <style>
+          /* Here I want the home section to be linear gradient */
+          .home {
+            background: linear-gradient(45deg, #e18dff, hsl(327, 100%, 65%));
+          }
+
+          /* Stack the "About" section columns vertically on smaller screen for a responsive design */
+          @media (max-width: 768px) {
+
+            .about .colLeft,
+            .about .colRight {
+              flex-direction: column;
+            }
+          }
+
+          /*Creating Video size and background color, doing some styling for the video element*/
+          video {
+            width: 400px;
+            padding: 15px;
+            margin: 15px;
+            background-color: black;
+            border: 2px whitesmoke;
+            box-shadow: 8px 8px 4px black;
+          }
+        </style>
+      </head>
+
+      <body>
+        <!-- Start Header Section - This section contains the navigation menu and logo-->
+        <header id="header">
+          <div class="header container">
+            <div class="navBar">
+              <div class="logo">
+                <h1>Zainab Syed</h1>
+              </div>
+              <nav class="navList">
+                <div class="navLines">
+                  <div class="bar"></div>
+                </div>
+                <ul>
+                  <!-- Here are the navigation links within this unordered list -->
+                  <li><a href="#home" class="navLink scrollto active"> <span>Home</span></a></li>
+                  <li><a href="#about" class="navLink scrollto"><span>About</span></a></li>
+                  <li><a href="#projects" class="navLink scrollto"> <span>Projects</span></a></li>
+                  <li><a href="#contact" class="navLink scrollto"> <span>Contact</span></a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </header>
+        <!-- End Header -->
+
+        <!-- Home Section - Includes the Introduction and an image of me-->
+        <section id="home" class="home">
+          <div class="home container">
+            <!-- Left side: Image -->
+            <div class="home-left">
+              <img src="IMG_8223.PNG" alt="Zainab Syed" class="profile-img">
+
+            </div>
+            <!-- Right side: The introduction text and Button -->
+            <div class="home-right">
+              <h1 class="heading1">Hello, <span>Welcome!</span></h1>
+              <h1 class="heading2">My Name is <span>Zainab Syed</span></h1>
+              <a href="#projects" class="btn">Projects</a>
+            </div>
+          </div>
+        </section>
+        <!-- End Home Section -->
+
+        <!-- About Section - this will include some personal info about me, include some of my artworks-->
+        <section id="about">
+          <div class="about container">
+            <div class="colLeft">
+              <!-- This section will be my artworks, linked them -->
+              <div class="artwork-images">
+                <img src="IMG_0748.PNG" alt="Artwork 1" class="artwork-img">
+                <img src="IMG_0749.PNG" alt="Artwork 2" class="artwork-img">
+                <img src="IMG_0750.PNG" alt="Artwork 3" class="artwork-img">
+              </div>
+            </div>
+            <div class="colRight">
+              <!-- here there will be some personal info (mostly in the video) but will talk about my current education-->
+              <h1 class="sectionTitle">About <span>Me</span></h1>
+              <article>
+                <h2>Future Networking and Cybersecurity Professional</h2>
+                <p>I am currently pursuing my Bachelor's degree in Networking and IT Security at Ontario Tech
+                  University, eager to explore the exciting world of technology and security.
+
+                  On the left are some of my Artworks!!</p>
+              </article>
+              <!-- End About Section -->
+
+              <!-- Video Section, this is where I add my intro video -->
+              <video controls muted poster="poster-image.jpg">
+                <source src="IntroVideo.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </section>
+        <!-- End the About section -->
+
+
+        <!-- Projects Section - Here will showcase some of my recent projects done in Python -->
+        <section id="projects">
+          <div class="projects container">
+            <div class="projectsHeader">
+              <h1 class="sectionTitle">Recent <span>Projects</span></h1>
+            </div>
+            <div class="allProjects">
+              <!-- My first project is the basic calculator -->
+              <div class="projectItem">
+                <div class="projectInfo">
+                  <h1>Project 1: Basic Calculator</h1>
+                  <h2>Description:</h2>
+                  <p>This Python-based Basic Calculator is designed to perform standard arithmetic operations like
+                    addition, subtraction, multiplication, and division. It includes a simple, user-friendly
+                    interface that allows users to input two numbers and select the desired operation.
+                  </p>
+                </div>
+                <div class="projectImg"> <!-- the image to my first project -->
+                  <img src="Project1.png" alt="Basic Calculator" />
+                </div>
+              </div>
+              <div class="projectItem">
+                <div class="projectInfo">
+                  <h1>Project 2: Playfair Cipher OOP</h1>
+                  <h2>Description:</h2>
+                  <p>This project implements the Playfair Cipher, an encryption technique that uses a 5x5 matrix
+                    to encrypt pairs of letters. The user can input a plaintext message and a key, which the
+                    program will use to generate a cipher text.</p>
+                </div>
+                <!-- My second project is Playfair Cipher -->
+                <div class="projectImg">
+                  <img src="Project2.png" alt="Playfair Cipher" />
+                </div>
+              </div>
+              <!-- My third project is a Number Guessing Game!!:) -->
+              <div class="projectItem">
+                <div class="projectInfo">
+                  <h1>Project 3: Number Guessing Game</h1>
+                  <h2>Description:</h2>
+                  <p>The Number Guessing Game is a fun Python project where users try to guess a randomly
+                    generated number within a specified range. The program provides feedback on whether the
+                    guess is too high or too low, guiding the player to the correct number. It also tracks the
+                    number of attempts taken to guess correctly.
+                  </p>
+                </div>
+                <div class="projectImg">
+                  <img src="Project3.png" alt="Number Guessing Game" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End Projects Section -->
+
+        <!-- Contact Section - this will allow the visitors to send messages -->
+        <section id="contact">
+          <div class="contact container">
+            <!-- The title at the top -->
+            <div class="contactTitle">
+              <h1 class="sectionTitle">Contact <span>Me</span></h1>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contactItems">
+              <div class="contactItem">
+                <div class="contactInfo">
+                  <form action="#" method="post" class="phpEmailForm">
+                    <p>Name:</p>
+                    <input type="text" name="name" placeholder="Your Name" required />
+                    <p>Email:</p>
+                    <input type="email" name="email" placeholder="Your Email" required />
+                    <p>Cell No:</p>
+                    <input type="tel" name="cell" placeholder="123-456-7890" required
+                      pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
+                    <p>Message:</p>
+                    <textarea style="height: 150px" name="message" placeholder="Your Message" required></textarea>
+                    <div class="button">
+                      <button class="button" type="submit">Submit</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end the contacts section -->
+
+        <!-- Footer Section - Contact info and the Copyright -->
+        <footer id="footer">
+          <div class="footer container">
+            <div class="logo">
+              <h1><span>Thank You for Visiting!</span></h1>
+              <p>You can reach me at:</p>
+            </div>
+            <h2>Zainab Syed</h2>
+            <h2>Email: zainab.syed1@ontariotechu.net</h2>
+            <p>Copyright © 2024. All rights reserved.</p>
+          </div>
+        </footer>
+        <!-- End Footer -->
+
+        <!-- JavaScript for the navigation bar and scrolling effects -->
+        <script>
+          //toggle mobile navigation menu
+          const navLines = document.querySelector(".header .navBar .navList .navLines");
+          const menuItem = document.querySelectorAll(".header .navBar .navList ul li a");
+          const head = document.querySelector(".header.container");
+          const mobileMenu = document.querySelector(".header .navBar .navList ul");
+
+          navLines.addEventListener("click", () => {
+            navLines.classList.toggle("active");
+            mobileMenu.classList.toggle("active");
+          });
+
+          //here we change the header background color on scroll
+          document.addEventListener("scroll", () => {
+            var scrollPosition = window.scrollY;
+            if (scrollPosition < 250) {
+              head.style.backgroundColor = "transparent";
+            } else {
+              head.style.backgroundColor = "#29323c";
+            }
+          });
+
+          //here we close mobile menu when a navigation link is clicked
+          menuItem.forEach((item) => {
+            item.addEventListener("click", () => {
+              mobileMenu.classList.toggle("active");
+              navLines.classList.toggle("active");
+            });
+          });
+        </script>
+      </body>
+
+      </html>
+      <!-- end of my portfolio:) -->

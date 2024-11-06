@@ -1,0 +1,48 @@
+@media (max-width: 768px) {
+
+    /* Stack home section content vertically */
+    .home.container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    /* Adjust image and text alignment for smaller screens */
+    .home-left {
+        margin-bottom: 20px;
+    }
+
+    .home-left .profile-img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .home-right h1 {
+        font-size: 4rem;
+    }
+
+    /* Center text and reduce spacing */
+    .home-right {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    /* About section adjustments */
+    .about.container {
+        flex-direction: column;
+    }
+
+    .colLeft {
+        margin-bottom: 20px;
+    }
+
+    .colRight {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    /* Adjust project images */
+    .projectImg {
+        height: auto;
+        width: 100%;
+    }
+}

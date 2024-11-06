@@ -1,0 +1,580 @@
+@import "https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap";
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 11px;
+    scroll-behavior: smooth;
+    font-family: "Montserrat", sans-serif;
+}
+
+.container {
+    min-height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+p {
+    color: black;
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+    font-weight: 300;
+    margin-top: 5px;
+    letter-spacing: 0.05rem;
+}
+
+.sectionTitle {
+    font-size: 4rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    text-align: center;
+}
+
+.sectionTitle span {
+    color: rgb(220, 20, 123);
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 30px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid #650a80;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-top: 30px;
+    transition: 0.3s ease;
+    transition-property: background-color, color;
+}
+
+.btn:hover {
+    color: white;
+    background-color: rgb(220, 20, 103);
+}
+
+.logo h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: white;
+}
+
+.logo h1 span {
+    color: rgb(220, 20, 123);
+}
+
+/* Header section */
+#header {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: auto;
+    background-color: black;
+    /* Set top bar to black */
+}
+
+#header .header {
+    min-height: 8vh;
+}
+
+#header .navBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    max-width: 1300px;
+    padding: 0 10px;
+}
+
+#header .navList ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+#header .navList ul a {
+    font-size: 2rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    padding: 20px;
+    display: block;
+}
+
+#header .navList ul li:hover a {
+    color: rgb(220, 20, 163);
+}
+
+/*Home Section*/
+.home.container {
+    display: flex;
+    justify-content: space-between;
+    /* Ensures space between image and text */
+    align-items: center;
+    /* Centers content vertically */
+    padding: 50px;
+    /* Add padding around the content */
+    height: 100vh;
+    /* Full viewport height */
+}
+
+/* Left side: Image container */
+.home-left {
+    flex: 1;
+    /* Takes up equal space on the left */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-left .profile-img {
+    max-width: 100%;
+    /* Ensures the image is responsive */
+    height: auto;
+    border-radius: 10px;
+    /* Optional: adds rounded corners */
+    max-width: 350px;
+    /* Adjust the maximum width of the image */
+}
+
+/* Right side: Text and button container */
+.home-right {
+    flex: 0.5;
+    /* Takes up equal space on the right */
+    text-align: center;
+    /* Aligns text to the right */
+}
+
+/* Adjusted the font size for both headings */
+#home .heading1,
+#home .heading2 {
+    margin-bottom: 20px;
+    /* Increased spacing between headings */
+    color: white;
+    font-size: 3.5rem;
+    /* Slightly smaller font size */
+    font-weight: bold;
+}
+
+/* Styling for the button */
+#home .btn {
+    margin-top: 20px;
+    padding: 10px 25px;
+    font-size: 1.6rem;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    border: none;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+#home .btn:hover {
+    background-color: rgb(220, 20, 103);
+}
+
+/* Media query for responsiveness on smaller screens */
+@media (max-width: 768px) {
+    .home.container {
+        flex-direction: column;
+        /* Stacks content vertically on smaller screens */
+    }
+
+    .home-right {
+        text-align: center;
+        /* Centers text on smaller screens */
+    }
+
+    .home-left {
+        margin-bottom: 20px;
+        /* Adds space below the image on small screens */
+    }
+}
+
+/* Home Section Styles */
+
+/* White and Pink Shadow for Image in Home Page */
+.home-left img {
+    max-width: 500px;
+    /* Ensure the image is responsive */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(255, 255, 255, 0.8),
+        15px 15px 20px rgba(255, 255, 255, 0.8);
+    /* White and pink shadow */
+    margin-right: 30px;
+    /* Adds space between the image and the text */
+}
+
+/* Text size increase in Home Page */
+.home-right h1 {
+    font-size: 7rem;
+    /* Increase the size of the "Hello, Welcome" text */
+    color: white;
+}
+
+.home-right h1 span {
+    color: rgb(255, 179, 192);
+    /* Emphasize "Welcome" and "Zainab Syed" in pink */
+}
+
+.home-right a.btn {
+    font-size: 2.5rem;
+    /* Increase button text size */
+    margin-top: 20px;
+    padding: 15px 40px;
+    border: 2px solid #ff77a0;
+    /* Pink border */
+    color: white;
+    background-color: transparent;
+}
+
+.home-right a.btn:hover {
+    background-color: #ff77a0;
+    /* Pink hover effect */
+    color: white;
+}
+
+/* Footer Font Color to White */
+#footer h2,
+#footer p,
+#footer h1 {
+    color: white;
+    /* Ensure all footer text is white */
+}
+
+#footer h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#footer p {
+    font-size: 1.3rem;
+    margin-top: 10px;
+}
+
+#footer .logo h1 {
+    color: white;
+    /* Footer logo font in white */
+}
+
+
+
+/*End of Home Section*/
+
+/* About Section */
+/*Flexbox for aligning image and video side-by-side */
+.about.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* Align items to the top (text and video) */
+    padding: 50px 0;
+}
+
+/* Left side: Image */
+.colLeft {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.colLeft img {
+    max-width: 100%;
+    height: auto;
+    max-width: 350px;
+    border-radius: 10px;
+}
+
+.colL {
+    max-width: 70%;
+}
+
+/* Right side: Video and Text */
+.colRight {
+    flex: 2;
+    padding-left: 30px;
+}
+
+/* Text Alignment */
+.colRight h1,
+.colRight p {
+    margin-bottom: 20px;
+    text-align: left;
+    /* Align text to the left */
+}
+
+/* Styling for video */
+video {
+    width: 100%;
+    max-width: 400px;
+    /* Smaller video width */
+    padding: 15px;
+    margin: 15px;
+    background-color: rgb(250, 80, 151);
+    border: 2px solid whitesmoke;
+    box-shadow: 8px 8px 4px black;
+}
+
+
+/* Styling for artwork images */
+.artwork-images {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* Space between images */
+}
+
+.artwork-img {
+    max-width: 250px;
+    /* Make images smaller */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .about.container {
+        flex-direction: column;
+    }
+
+    .colRight {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .colLeft {
+        margin-bottom: 20px;
+    }
+}
+
+/* Projects section */
+#projects .projects {
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+#projects .projectsHeader h1 {
+    margin-bottom: 50px;
+}
+
+#projects .allProjects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#projects .projectItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+#projects .projectInfo {
+    padding: 30px;
+    flex-basis: 50%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background-image: linear-gradient(60deg, #783288 0%, #D2A0DE 100%);
+    color: white;
+}
+
+#projects .projectInfo h1 {
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+#projects .projectInfo h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+#projects .projectInfo p {
+    color: white;
+}
+
+#projects .projectImg {
+    flex-basis: 50%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+#projects .projectImg img {
+    transition: 0.3s ease transform;
+}
+
+#projects .projectItem:hover .projectImg img {
+    transform: scale(1.1);
+}
+
+/* Contact Section */
+#contact {
+    padding: 60px 0;
+}
+
+#contact .contactTitle {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-start;
+    /* Align the "Contact Me" title to the left */
+    padding-left: 20px;
+    /* Add padding to shift it away from the edge */
+}
+
+#contact .sectionTitle {
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-align: left;
+    /* Align text to the left */
+    margin-right: 40px;
+    /* Increase margin to move it further from the form */
+}
+
+/* Align form elements to the left and center button */
+#contact .contactItems {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Align form to the left */
+    margin-left: 20px;
+    /* Adjust margin to move form closer to the center */
+}
+
+#contact .phpEmailForm {
+    width: 100%;
+    max-width: 600px;
+    margin: 0;
+    /* Remove auto margin */
+}
+
+/* Style the input fields */
+#contact .phpEmailForm input,
+#contact .phpEmailForm textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 12px;
+    font-size: 1.2rem;
+}
+
+/* Center the submit button */
+#contact .phpEmailForm button {
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    background-color: rgb(220, 20, 103);
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    /* Center the button and add spacing above */
+}
+
+#contact .phpEmailForm button:hover {
+    background-color: rgb(176, 44, 125);
+}
+
+/* Footer */
+#footer {
+    background-image: linear-gradient(60deg, #783288 0%, #D2A0DE 100%);
+}
+
+#footer .footer {
+    min-height: 200px;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    display: flex;
+    /* Use flexbox for centering */
+    align-items: center;
+    /* Center items horizontally */
+    justify-content: center;
+    /* Center items vertically */
+}
+
+#footer h1 {
+    color: #000000;
+}
+
+#footer h2 {
+    color: white;
+    font-weight: 500;
+    font-size: 1.8rem;
+    letter-spacing: 0.1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    /* Ensure text is centered */
+}
+
+#footer p {
+    color: white;
+    font-size: 1.3rem;
+    text-align: center;
+    /* Center the paragraph text */
+}
+
+/* Keyframes */
+@keyframes text_reveal_box {
+    50% {
+        width: 100%;
+        left: 0;
+    }
+
+    100% {
+        width: 0;
+        left: 100%;
+    }
+}
+
+@keyframes text_reveal {
+    100% {
+        color: white;
+    }
+}
+
+@keyframes text_reveal_name {
+    100% {
+        color: rgb(255, 255, 255);
+        font-weight: 500;
+    }
+}

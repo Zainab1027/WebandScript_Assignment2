@@ -1,0 +1,32 @@
+@media (max-width: 1024px) {
+
+    /* Ensure container stack properly for tablet sizes */
+    .home.container {
+        flex-direction: row;
+        padding: 20px;
+    }
+
+    /* Adjust image and text sizes for tablets */
+    .home-left .profile-img {
+        max-width: 250px;
+    }
+
+    .home-right h1 {
+        font-size: 5rem;
+    }
+
+    /* Center text for about section on tablets */
+    .colLeft img {
+        max-width: 300px;
+    }
+
+    .colRight {
+        text-align: center;
+    }
+
+    /* Make buttons smaller */
+    .home-right a.btn {
+        font-size: 2rem;
+        padding: 10px 30px;
+    }
+}

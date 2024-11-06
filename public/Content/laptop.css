@@ -1,0 +1,59 @@
+/* Media Query for Laptops and Desktops */
+@media only screen and (min-width: 1024px) {
+
+    /* Adjust Navbar */
+    #navbar {
+        background-color: #000;
+        /* Make navbar black by default */
+    }
+
+    /* Adjust container width to be suitable for larger screens */
+    .container {
+        max-width: 1200px;
+        /* Max width for laptop/desktop */
+        margin: 0 auto;
+    }
+
+    /* Home section: Bigger font sizes and better spacing */
+    #home .heading1,
+    #home .heading2 {
+        font-size: 4.5rem;
+        /* Larger font size */
+    }
+
+    /* Adjust button size and spacing */
+    .btn {
+        padding: 15px 40px;
+        /* Bigger buttons on larger screens */
+        font-size: 2rem;
+    }
+
+    /* About section: Adjust the layout for larger screens */
+    .about.container {
+        display: flex;
+        flex-direction: row;
+        /* Side-by-side layout */
+        padding: 60px;
+    }
+
+    .colLeft,
+    .colRight {
+        flex: 1;
+    }
+
+    /* Footer: Adjust padding and text size for larger screens */
+    #footer .footer {
+        padding-top: 60px;
+        padding-bottom: 20px;
+    }
+
+    #footer h1 {
+        font-size: 2.8rem;
+        /* Larger "Thank You for Visiting" text */
+    }
+
+    #footer p {
+        font-size: 1.5rem;
+        /* Slightly larger footer text */
+    }
+}
